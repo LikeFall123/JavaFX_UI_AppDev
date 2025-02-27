@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.alkfejl.zh1gyak.App">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="Rendelések">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#addNewOrder" text="Új rendelés" />
+                  <MenuItem mnemonicParsing="false" text="Listázás" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TableView fx:id="tableView" layoutX="14.0" layoutY="37.0" prefHeight="329.0" prefWidth="550.0">
+        <columns>
+          <TableColumn fx:id="customerCol" prefWidth="100.79995441436768" text="Megrendelő" />
+          <TableColumn fx:id="titleCol" prefWidth="80.79998779296875" text="Titulus" />
+            <TableColumn fx:id="portionCol" prefWidth="80.79998779296875" text="Adag" />
+            <TableColumn fx:id="paymentCol" prefWidth="107.99993896484375" text="Fizető eszköz" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
